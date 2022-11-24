@@ -1,0 +1,2 @@
+
+radiant is not oaded on javascript

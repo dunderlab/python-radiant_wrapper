@@ -17,6 +17,9 @@ setup(
         'python-for-android',
         'cython',
     ],
+    scripts=[
+       "cmd/docker_p4a",
+    ],
     include_package_data=True,
     license='BSD-2-Clause',
     description="Brython Framework",

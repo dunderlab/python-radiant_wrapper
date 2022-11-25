@@ -1,0 +1,14 @@
+#!/usr/bin/env python
+
+import os
+import sys
+
+APP = 'appname'
+IMAGE = 'yeisondev/radiant:compiler'
+SOURCE = os.path.abspath(os.curdir)
+DOCKER = f'docker run --rm --mount type=bind,source={SOURCE},target=/app/env {IMAGE}'
+
+
+os.system(f'{DOCKER} p4a {" ".join(sys.argv[1:])}')
+
+# 'p4a apk --arch arm64-v8a'

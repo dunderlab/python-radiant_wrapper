@@ -36,3 +36,4 @@ ENV ANDROIDNDK=/app/android/ndk/android-ndk-r23b \
     ANDROIDAPI=27
 
 WORKDIR /app/env
+CMD ["/usr/bin/bash"]

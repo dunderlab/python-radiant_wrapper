@@ -3,12 +3,17 @@
 import os
 import sys
 
-APP = 'appname'
 IMAGE = 'yeisondev/radiant:compiler'
 SOURCE = os.path.abspath(os.curdir)
-DOCKER = f'docker run --rm --mount type=bind,source={SOURCE},target=/app/env {IMAGE}'
+APP = os.path.split(SOURCE)[-1].replace('_', '')
 
+DOCKER_CREATE = f'docker create -i --name {APP} --mount type=bind,source={SOURCE},target=/app/env {IMAGE}'
+DOCKER_START = f'docker start {APP}'
+DOCKER_EXEC = f'docker exec {APP}'
+DOCKER_STOP = f'docker stop {APP}'
+DOCKER_RUN = f'docker run --rm --mount type=bind,source={SOURCE},target=/app/env {IMAGE}'
 
-os.system(f'{DOCKER} p4a {" ".join(sys.argv[1:])}')
-
-# 'p4a apk --arch arm64-v8a'
+os.system(DOCKER_CREATE)
+os.system(DOCKER_START)
+os.system(f'{DOCKER_EXEC} p4a {" ".join(sys.argv[1:])}')
+os.system(DOCKER_STOP)

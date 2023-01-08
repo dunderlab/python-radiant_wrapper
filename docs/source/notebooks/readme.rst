@@ -1,5 +1,5 @@
-Radiant - Compiler
-==================
+Radiant-Compiler
+================
 
 Pull the image with the environ for
 `python-for-android <https://python-for-android.readthedocs.io/en/latest/>`__

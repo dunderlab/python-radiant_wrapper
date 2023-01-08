@@ -1,4 +1,4 @@
-# Radiant - Compiler
+# Radiant-Compiler
 
 Pull the image with the environ for [python-for-android](https://python-for-android.readthedocs.io/en/latest/) that includes the [Android NDK](https://developer.android.com/studio/projects/install-ndk) and the [SDK](https://developer.android.com/studio) to compile Python applications into APKs installer:
 

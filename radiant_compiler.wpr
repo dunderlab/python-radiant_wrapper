@@ -1,5 +1,5 @@
 #!wing
-#!version=8.0
+#!version=9.0
 ##################################################################
 # Wing project file                                              #
 ##################################################################
@@ -11,7 +11,7 @@ proj.directory-list = [{'dirloc': loc('.'),
                         'recursive': True,
                         'watch_for_changes': True}]
 proj.file-type = 'shared'
-proj.launch-config = {loc('cmd/radiant_compiler'): ('project',
+proj.launch-config = {loc('../../../../../Development/BCI-Framework/python-radiant_compiler/cmd/docker_p4a'): ('project',
         ('hola mundo',
          ''))}
-proj.main-file = loc('examples/brython_app/brython_app/main.py')
+proj.main-file = loc('../../../../../Development/BCI-Framework/python-radiant_compiler/examples/brython_app/brython_app/main.py')

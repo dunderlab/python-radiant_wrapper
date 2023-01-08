@@ -1,8 +1,10 @@
 
 .. include:: notebooks/readme.rst
 
+
+
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 2
    :name: mastertoc
 
    
@@ -15,4 +17,7 @@
     * :ref:`genindex`
     * :ref:`modindex`
     * :ref:`search`
-    
+
+..
+  .. include:: notebooks/footer.rst
+        

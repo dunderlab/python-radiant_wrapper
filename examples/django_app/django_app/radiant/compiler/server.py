@@ -1,3 +1,11 @@
+"""
+======
+Server
+======
+
+
+"""
+
 import sys
 import os
 import time
@@ -9,6 +17,11 @@ from .android.permissions import Permission
 
 
 class ThreadedWSGIServer(socketserver.ThreadingMixIn, simple_server.WSGIServer):
+    """Start Django in multithreaded mode
+
+    It allows for debugging Django while serving multiple requests at once in
+    multi-threaded mode.
+    """
     pass
 
 
@@ -25,22 +38,12 @@ def set_permissions(permissions):
             time.sleep(0.1)
 
 
-# logging.info("Creating WSGI application...")
-
-
 # ----------------------------------------------------------------------
 def main(ip='localhost', port=5000):
     """"""
-
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "test_project.settings")
     os.environ.setdefault("FRAMEWORK", "django")
     httpd = simple_server.make_server('localhost', 5000, get_wsgi_application(), server_class=ThreadedWSGIServer)
     httpd.serve_forever()
     logging.info("Radiant serving on {}:{}".format(*httpd.server_address))
 
-
-# os.environ.setdefault("DJANGO_SETTINGS_MODULE", "test_project.settings")
-# os.environ.setdefault("FRAMEWORK", "django")
-# httpd = simple_server.make_server('localhost', 5000, get_wsgi_application(), server_class=ThreadedWSGIServer)
-# httpd.serve_forever()
-# logging.info("Radiant serving on {}:{}".format(*httpd.server_address))

@@ -1,4 +1,4 @@
---no-compile-pyo
+--no-byte-compile-python
 --private brython_app
 --package org.example.brython_app
 --name "My WebView Brython Application"
@@ -7,4 +7,5 @@
 --bootstrap webview
 --requirements tornado,jinja2,markupsafe,pyjnius
 --whitelist whitelist.txt
+--blacklist blacklist.txt
 --port 5000

@@ -15,6 +15,7 @@ if __name__ == '__main__':
     RadiantServer('BareMinimum',
                   host='localhost',
                   port=5001,
+                  brython_version='3.12.0',
                   )
 
 

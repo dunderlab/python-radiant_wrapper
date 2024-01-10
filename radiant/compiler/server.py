@@ -39,9 +39,9 @@ def set_permissions(permissions):
 
 
 # ----------------------------------------------------------------------
-def main(ip='localhost', port=5000):
+def main(project, ip='localhost', port=5000):
     """"""
-    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "test_project.settings")
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", f"{project}.settings")
     os.environ.setdefault("FRAMEWORK", "django")
     httpd = simple_server.make_server('localhost', 5000, get_wsgi_application(), server_class=ThreadedWSGIServer)
     httpd.serve_forever()

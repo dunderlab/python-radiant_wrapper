@@ -1,0 +1,10 @@
+--no-byte-compile-python
+--private .
+--package org.example.brython_app
+--name "My WebView Brython Application"
+--dist_name brython_app
+--version 0.1
+--bootstrap webview
+--requirements tornado,jinja2,markupsafe,pyjnius
+--whitelist whitelist.txt
+--port 5001

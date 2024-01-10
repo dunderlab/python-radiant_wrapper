@@ -23,6 +23,19 @@ jobs:
         # Pull the latest Docker image from dunderlab/radiant_p4a
         docker pull dunderlab/radiant_p4a:latest
 
+        # Dowload the main sources to prevent compilation
+        if grep -q "radiant.compiler" main.py; then
+            pip download --no-deps django
+            unzip Django*.whl "django/*" -d .
+            pip download  --no-deps radiant-compiler
+            unzip radiant_compiler*.whl "radiant/*" -d .
+        fi
+        if grep -q "radiant.framework" main.py; then
+            pip download  --no-deps radiant-framework
+            unzip radiant_framework*.whl "radiant/*" -d .
+        fi
+        rm *.whl
+
         # Create a blacklist.txt file and write "*.pyc" into it
         # This is typically used to exclude Python bytecode files
         echo "*.pyc" > blacklist.txt

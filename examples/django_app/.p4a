@@ -1,5 +1,5 @@
 --no-byte-compile-python
---private django_app
+--private .
 --package org.example.django_app
 --name "My WebView Django Application"
 --dist_name django_app

@@ -1,3 +1,0 @@
-sqlite3/*
-lib-dynload/_sqlite3.so
-*.py

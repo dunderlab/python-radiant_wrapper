@@ -1,26 +1,26 @@
-FROM archlinux:base-devel
+FROM --platform=linux/amd64 archlinux:base-devel
 
-LABEL image="dunderlab/radiant_p4a"
-LABEL version="1.0"
-LABEL maintainer="yencardonaal@unal.edu.co"
-LABEL description=""
-LABEL project=""
-LABEL documentation=""
-LABEL license="BSD 2-Clause"
+LABEL image="dunderlab/radiant_p4a" \
+      version="1.1" \
+      maintainer="yencardonaal@unal.edu.co" \
+      description="" \
+      project="" \
+      documentation="" \
+      license="BSD 2-Clause"
 
-ARG NDK_VERSION=r26b \
+ARG NDK_VERSION=r25b \
     SDK_VERSION=10406996_latest \
     JAVA_VERSION=jdk17-openjdk \
     NDKAPI=30 \
     ANDROIDAPI=30 \
-    BUILDTOOL='34.0.0'
-
-LABEL maintainer="yencardonaal@unal.edu.co" \
-      version="1.1"
+    BUILDTOOL=34.0.0 \
+    P4A_VERSION=2024.1.21 \
+    CYTHON_VERSION=3.0.4
 
 RUN pacman --noconfirm -Suy \
     && pacman --noconfirm -S vim wget zip unzip ${JAVA_VERSION} python python-pip \
-    && pip install --break-system-packages python-for-android cython
+    && archlinux-java set java-17-openjdk \
+    && pip install --break-system-packages python-for-android==${P4A_VERSION} cython==${CYTHON_VERSION}
 
 WORKDIR /app/android
 RUN wget -c https://dl.google.com/android/repository/android-ndk-${NDK_VERSION}-linux.zip \

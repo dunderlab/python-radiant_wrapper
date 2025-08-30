@@ -13,7 +13,7 @@ import socketserver
 import logging
 from wsgiref import simple_server
 from django.core.wsgi import get_wsgi_application
-from radiant.compiler.android.permissions import Permission
+from radiant.wrapper.android.permissions import Permission
 
 
 class ThreadedWSGIServer(socketserver.ThreadingMixIn, simple_server.WSGIServer):

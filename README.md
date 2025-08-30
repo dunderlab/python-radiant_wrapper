@@ -11,7 +11,7 @@ Radiant-Wrapper is a Docker image that allows you to generate APKs for Android. 
 Pull the Docker image that includes the [Android NDK](https://developer.android.com/studio/projects/install-ndk) and [SDK](https://developer.android.com/studio):
 
 ```bash
-docker pull dunderlab/radiant_p4a.py
+docker pull dunderlab/radiant_p4a
 ```
 
 Then install the Python package to use the wrapper command:

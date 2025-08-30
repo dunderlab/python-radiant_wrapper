@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "radiant-wrapper"
-version = "0.1a6"
+version = "0.1a7"
 description = "Radiant-Wrapper"
 readme = "README.md"
 requires-python = ">=3.10"
@@ -42,11 +42,11 @@ dependencies = [
 
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["radiant"]
+include = ["radiant.wrapper"]
 
 [tool.pytest.ini_options]
 asyncio_default_fixture_loop_scope = "function"
 
 [project.scripts]
-radiant_p4a = "radiant.compiler.radiant_p4a:main"
+radiant_p4a = "radiant.wrapper.scripts.radiant_p4a:main"
 

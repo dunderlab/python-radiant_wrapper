@@ -3,7 +3,7 @@
 import os
 import sys
 
-IMAGE = 'dunderlab/radiant_p4a:latest'
+IMAGE = 'dunderlab/radiant_p4a.py:latest'
 SOURCE = os.path.abspath(os.curdir)
 APP = os.path.split(SOURCE)[-1].replace('_', '')
 

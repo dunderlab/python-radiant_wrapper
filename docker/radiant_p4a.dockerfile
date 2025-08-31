@@ -8,12 +8,12 @@ LABEL image="dunderlab/radiant_p4a" \
       documentation="" \
       license="BSD 2-Clause"
 
-ARG NDK_VERSION=r25b \
-    SDK_VERSION=10406996_latest \
+ARG NDK_VERSION=r28c \
+    SDK_VERSION=13114758_latest \
     JAVA_VERSION=jdk17-openjdk \
-    NDKAPI=30 \
-    ANDROIDAPI=30 \
-    BUILDTOOL=34.0.0 \
+    NDKAPI=35 \
+    ANDROIDAPI=35 \
+    BUILDTOOL=35.0.0 \
     P4A_VERSION=2024.1.21 \
     CYTHON_VERSION=3.0.4
 

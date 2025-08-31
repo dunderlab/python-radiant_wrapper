@@ -64,3 +64,9 @@ BUILDTOOL=35.0.0
 P4A_VERSION=2024.1.21
 CYTHON_VERSION=3.0.4
 ```
+
+## TODO List
+
+- [ ] Add icon for the app
+- [ ] Add splash screen for the app
+- [ ] Add the possibility to sign the app (ready for the Play store)

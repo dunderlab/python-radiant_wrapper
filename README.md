@@ -67,6 +67,6 @@ CYTHON_VERSION=3.0.4
 
 ## TODO List
 
-- [ ] Add icon for the app
-- [ ] Add splash screen for the app
+- [x] Add icon for the app
+- [x] Add splash screen for the app
 - [ ] Add the possibility to sign the app (ready for the Play store)
